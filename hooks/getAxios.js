@@ -18,7 +18,6 @@ const useGetAxios = (apiUrl) => {
     const initialGet = async () => {
       try {
         let res = await axios.get(apiUrl);
-        // console.log('these are the results', res)
         setResponse(res.data);
       } catch (e) {
         setError(e);

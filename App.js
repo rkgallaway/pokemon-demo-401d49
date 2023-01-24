@@ -1,11 +1,9 @@
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import useGetAxios from './hooks/getAxios';
 import { Box, Button, Center, NativeBaseProvider, Pressable, VStack } from "native-base";
 import { LinearGradient } from 'expo-linear-gradient';
 import ScrollTileList from './Components/ScrollableTileList';
 import * as Haptics from 'expo-haptics';
-
 
 const config = {
   dependencies: {
@@ -15,14 +13,6 @@ const config = {
 
 export default function App() {
   const { results, getNext, next } = useGetAxios('https://pokeapi.co/api/v2/pokemon');
-
-  // console.log({ results }, { next });
-
-  const Item = ({ title }) => (
-    <View style={styles.item}>
-      <Text style={styles.title}>{title}</Text>
-    </View>
-  );
 
   return (
     <NativeBaseProvider config={config}>
@@ -41,7 +31,6 @@ export default function App() {
         </Box>
 
         <VStack mt="3" space={3} alignItems="center">
-
 
           <ScrollTileList
             data={results}
@@ -72,24 +61,9 @@ export default function App() {
                 </Center>
               </Pressable>
             )}
-          // renderItem={(item) => (
-          //   <Button
-          //     key={item.url}
-          //     onPress={() => Haptics.selectionAsync()}
-          //     size="md"
-          //     m="1"
-          //   >
-          //     {item.name}
-          //   </Button>)}
-          // keyExtractor={item => item.url}
           />
         </VStack>
         <Button mt="5" onPress={() => getNext(next)} >Next</Button>
-
-
-
-        {/* <StatusBar style="auto" /> */}
-
       </Box>
 
     </NativeBaseProvider>
