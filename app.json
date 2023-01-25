@@ -1,8 +1,8 @@
 {
   "expo": {
     "name": "pokemon-demo",
-    "slug": "pokemon-demo-401d49",
-    "version": "1.0.0",
+    "slug": "pokemon-401d49",
+    "version": "1.3.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -13,7 +13,7 @@
     },
     "updates": {
       "fallbackToCacheTimeout": 0,
-      "url": "https://u.expo.dev/ba610d23-ce86-445a-8870-4d20e53d7f87"
+      "url": "https://u.expo.dev/36f26c43-62c7-430d-b35c-869f7e060274"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -34,7 +34,7 @@
     },
     "extra": {
       "eas": {
-        "projectId": "713818c7-210c-401a-858e-5da891423108"
+        "projectId": "36f26c43-62c7-430d-b35c-869f7e060274"
       }
     },
     "runtimeVersion": {
